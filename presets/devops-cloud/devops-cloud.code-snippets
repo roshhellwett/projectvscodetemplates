@@ -1,0 +1,98 @@
+{
+  "Dockerfile Base": {
+    "prefix": "dockerfile",
+    "body": [
+      "FROM ${1:node:18-alpine}",
+      "",
+      "WORKDIR /app",
+      "",
+      "COPY package*.json ./",
+      "RUN npm ci --only=production",
+      "",
+      "COPY . .",
+      "",
+      "EXPOSE ${2:3000}",
+      "",
+      "CMD [\"node\", \"index.js\"]"
+    ],
+    "description": "Dockerfile template"
+  },
+  "Docker Compose": {
+    "prefix": "dcfile",
+    "body": [
+      "version: '3.8'",
+      "",
+      "services:",
+      "  ${1:service}:",
+      "    image: ${2:image}",
+      "    ports:",
+      "      - \"${3:8080}:${4:80}\"",
+      "    environment:",
+      "      - ${5:KEY}=${6:value}",
+      "    volumes:",
+      "      - ./data:${7:/data}"
+    ],
+    "description": "Docker Compose file"
+  },
+  "Kubernetes Deployment": {
+    "prefix": "k8sdeploy",
+    "body": [
+      "apiVersion: apps/v1",
+      "kind: Deployment",
+      "metadata:",
+      "  name: ${1:my-app}",
+      "spec:",
+      "  replicas: 3",
+      "  selector:",
+      "    matchLabels:",
+      "      app: ${1:my-app}",
+      "  template:",
+      "    metadata:",
+      "      labels:",
+      "        app: ${1:my-app}",
+      "    spec:",
+      "      containers:",
+      "      - name: ${1:my-app}",
+      "        image: ${2:image}:${3:tag}",
+      "        ports:",
+      "        - containerPort: ${4:8080}"
+    ],
+    "description": "Kubernetes deployment"
+  },
+  "Kubernetes Service": {
+    "prefix": "k8ssvc",
+    "body": [
+      "apiVersion: v1",
+      "kind: Service",
+      "metadata:",
+      "  name: ${1:my-service}",
+      "spec:",
+      "  selector:",
+      "    app: ${2:my-app}",
+      "  ports:",
+      "  - port: ${3:80}",
+      "    targetPort: ${4:8080}",
+      "  type: ${5:ClusterIP}"
+    ],
+    "description": "Kubernetes service"
+  },
+  "Terraform Provider": {
+    "prefix": "tfprov",
+    "body": [
+      "provider \"${1:aws}\" {",
+      "  region = \"${2:us-east-1}\"",
+      "}"
+    ],
+    "description": "Terraform provider block"
+  },
+  "Terraform Resource": {
+    "prefix": "tfres",
+    "body": [
+      "resource \"${1:aws_s3_bucket}\" \"${2:bucket}\" {",
+      "  bucket = \"${3:my-unique-bucket-name}\"",
+      "  acl    = \"${4:private}\"",
+      "}"
+    ],
+    "description": "Terraform resource block"
+  }
+}

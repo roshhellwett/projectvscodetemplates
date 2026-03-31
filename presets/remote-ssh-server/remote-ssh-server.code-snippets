@@ -1,0 +1,31 @@
+{
+  "SSH Config Host": {
+    "prefix": "sshhost",
+    "body": [
+      "Host ${1:hostname}",
+      "    HostName ${2:ip.address}",
+      "    User ${3:username}",
+      "    Port ${4:22}",
+      "    IdentityFile ~/.ssh/${5:key_file}"
+    ],
+    "description": "SSH config host entry"
+  },
+  "Bash Function": {
+    "prefix": "fn",
+    "body": [
+      "${1:function_name}() {",
+      "    ${2:commands}",
+      "}"
+    ],
+    "description": "Bash function"
+  },
+  "TMUX Session": {
+    "prefix": "tmux",
+    "body": [
+      "tmux new-session -d -s ${1:session_name}",
+      "tmux split-window -h",
+      "tmux attach-session -t ${1:session_name}"
+    ],
+    "description": "TMUX session setup"
+  }
+}

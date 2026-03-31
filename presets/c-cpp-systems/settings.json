@@ -1,0 +1,30 @@
+{
+  "editor.fontSize": 13,
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "off",
+  "editor.minimap.enabled": true,
+  "workbench.colorTheme": "Monokai",
+  "C_Cpp.default.cppStandard": "c++20",
+  "C_Cpp.default.cStandard": "c17",
+  "C_Cpp.errorSquiggles": "enabled",
+  "C_Cpp.intelliSenseEngine": "default",
+  "C_Cpp.autocomplete": "default",
+  "C_Cpp.configurationWarnings": "enabled",
+  "cmake.configureOnOpen": true,
+  "cmake.showOptionsMovedNotification": false,
+  "files.autoSave": "onFocusChange",
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "editor.rulers": [80, 120],
+  "editor.renderWhitespace": "boundary",
+  "editor.bracketPairColorization.enabled": true
+}

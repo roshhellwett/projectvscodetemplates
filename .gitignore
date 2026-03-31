@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+*.backup
+*.backup.*
+node_modules
+.env
+.vscode-test
+*.log

@@ -1,0 +1,21 @@
+{
+  "editor.fontSize": 14,
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "on",
+  "workbench.colorTheme": "Flutter",
+  "dart.flutterSdkPath": "",
+  "dart.lineLength": 120,
+  "dart.insertArgumentPlaceholders": true,
+  "dart.previewFlutterUiGuides": true,
+  "flutter.showWidgetIds": true,
+  "flutter.targetDeviceId": null,
+  "[dart]": {
+    "editor.defaultFormatter": "Dart-Code.flutter-provider"
+  },
+  "editor.rulers": [80],
+  "files.autoSave": "afterDelay",
+  "terminal.integrated.fontSize": 13
+}

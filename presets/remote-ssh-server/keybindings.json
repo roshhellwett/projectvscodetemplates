@@ -1,0 +1,22 @@
+[
+  {
+    "key": "ctrl+shift+p",
+    "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+k ctrl+r",
+    "command": "workbench.action.openRecent"
+  },
+  {
+    "key": "f1",
+    "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "workbench.action.newWindow"
+  }
+]

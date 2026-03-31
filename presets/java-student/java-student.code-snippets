@@ -1,0 +1,78 @@
+{
+  "Java Main Method": {
+    "prefix": "jmain",
+    "body": [
+      "public static void main(String[] args) {",
+      "    $0",
+      "}"
+    ],
+    "description": "Java main method"
+  },
+  "Java Class": {
+    "prefix": "jclass",
+    "body": [
+      "public class ${1:ClassName} {",
+      "    private ${2:int} ${3:field};",
+      "",
+      "    public ${1:ClassName}() {",
+      "    }",
+      "",
+      "    public ${1:ClassName}(${2:int} ${3:field}) {",
+      "        this.${3:field} = ${3:field};",
+      "    }",
+      "",
+      "    @Override",
+      "    public String toString() {",
+      "        return \"${1:ClassName}{\" +",
+      "               \"field=\" + ${3:field} +",
+      "               '}';",
+      "    }",
+      "}"
+    ],
+    "description": "Java class with constructor and toString"
+  },
+  "Java Scanner": {
+    "prefix": "jscan",
+    "body": [
+      "Scanner scanner = new Scanner(System.in);",
+      "${1:int n = scanner.nextInt();}",
+      "${2:scanner.close();}"
+    ],
+    "description": "Java Scanner for input"
+  },
+  "Java Try Catch": {
+    "prefix": "jtry",
+    "body": [
+      "try {",
+      "    ${1:code}",
+      "} catch (${2:Exception} e) {",
+      "    e.printStackTrace();",
+      "}"
+    ],
+    "description": "Java try-catch block"
+  },
+  "JUnit Test": {
+    "prefix": "jtest",
+    "body": [
+      "@Test",
+      "void test${1:Name}() {",
+      "    ${2:assertEquals}(${3:expected}, ${4:actual});",
+      "}"
+    ],
+    "description": "JUnit test method"
+  },
+  "Java ArrayList": {
+    "prefix": "jarrlist",
+    "body": [
+      "ArrayList<${1:Integer}> ${2:list} = new ArrayList<>();"
+    ],
+    "description": "Java ArrayList declaration"
+  },
+  "Java HashMap": {
+    "prefix": "jhmap",
+    "body": [
+      "HashMap<${1:String}, ${2:Integer}> ${3:map} = new HashMap<>();"
+    ],
+    "description": "Java HashMap declaration"
+  }
+}

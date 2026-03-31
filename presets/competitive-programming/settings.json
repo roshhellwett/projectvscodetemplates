@@ -1,0 +1,30 @@
+{
+  "editor.fontSize": 14,
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontLigatures": true,
+  "editor.tabSize": 4,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.wordWrap": "off",
+  "editor.scrollBeyondLastLine": false,
+  "editor.renderLineHighlight": "all",
+  "workbench.colorTheme": "Tokyo Night Storm",
+  "code-runner.runInTerminal": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.executorMap": {
+    "cpp": "cd $dir && g++ -std=c++17 -O2 -o $fileNameWithoutExt $fileName && ./$fileNameWithoutExt < input.txt",
+    "c": "cd $dir && gcc -std=c11 -O2 -o $fileNameWithoutExt $fileName && ./$fileNameWithoutExt < input.txt",
+    "python": "cd $dir && python $fileName"
+  },
+  "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.errorSquiggles": "enabled",
+  "terminal.integrated.fontSize": 13,
+  "files.autoSave": "onFocusChange",
+  "editor.rulers": [80],
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  }
+}

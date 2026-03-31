@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "Dart-Code.flutter",
+    "Dart-Code.flutter-provider",
+    "Dart-Code.flutter-snippets",
+    "richie5um2.vscode-status-bar-format-toggle",
+    "streetsidesoftware.code-spell-checker",
+    "usernamehw.errorlens",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode"
+  ],
+  "unwantedRecommendations": []
+}

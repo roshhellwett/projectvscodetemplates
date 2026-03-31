@@ -1,0 +1,84 @@
+{
+  "Matplotlib Setup": {
+    "prefix": "mplsetup",
+    "body": [
+      "import matplotlib.pyplot as plt",
+      "import seaborn as sns",
+      "",
+      "plt.style.use('seaborn-v0_8-darkgrid')",
+      "plt.rcParams['figure.figsize'] = (10, 6)",
+      "plt.rcParams['font.size'] = 12",
+      "$0"
+    ],
+    "description": "Matplotlib setup with seaborn styling"
+  },
+  "Pandas Read CSV": {
+    "prefix": "pdread",
+    "body": [
+      "import pandas as pd",
+      "",
+      "df = pd.read_csv('${1:file.csv}')",
+      "print(df.head())",
+      "print(df.info())"
+    ],
+    "description": "Pandas read CSV with initial exploration"
+  },
+  "Numpy Import": {
+    "prefix": "npimp",
+    "body": [
+      "import numpy as np"
+    ],
+    "description": "Numpy import"
+  },
+  "Scikit Learn Train Test Split": {
+    "prefix": "ttsplit",
+    "body": [
+      "from sklearn.model_selection import train_test_split",
+      "",
+      "X_train, X_test, y_train, y_test = train_test_split(",
+      "    ${1:X}, ${2:y}, test_size=${3:0.2}, random_state=${4:42}",
+      ")"
+    ],
+    "description": "Train test split"
+  },
+  "Jupyter Cell Markdown": {
+    "prefix": "mdcell",
+    "body": [
+      "# ${1:Heading}",
+      "",
+      "${2:Content}"
+    ],
+    "description": "Markdown cell in Jupyter notebook"
+  },
+  "Lambda Function": {
+    "prefix": "lambda",
+    "body": [
+      "lambda ${1:x}: ${2:expression}"
+    ],
+    "description": "Lambda function"
+  },
+  "Pandas Group By": {
+    "prefix": "grpb",
+    "body": [
+      "df.groupby('${1:column}').agg({",
+      "    '${2:column2}': ['${3:mean}', '${4:sum}']",
+      "})"
+    ],
+    "description": "Pandas group by with aggregation"
+  },
+  "Matplotlib Subplots": {
+    "prefix": "mplsub",
+    "body": [
+      "fig, axes = plt.subplots(${1:2}, ${2:2}, figsize=(12, 8))",
+      "",
+      "axes[0, 0].plot(${3:data1})",
+      "axes[0, 1].plot(${4:data2})",
+      "axes[1, 0].hist(${5:data3})",
+      "axes[1, 1].scatter(${6:x}, ${7:y})",
+      "",
+      "plt.tight_layout()",
+      "plt.show()"
+    ],
+    "description": "Matplotlib subplots grid"
+  }
+}

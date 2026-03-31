@@ -1,0 +1,79 @@
+{
+  "Go Main": {
+    "prefix": "gomain",
+    "body": [
+      "package main",
+      "",
+      "func main() {",
+      "    $0",
+      "}"
+    ],
+    "description": "Go main function"
+  },
+  "Go Function": {
+    "prefix": "gofn",
+    "body": [
+      "func ${1:functionName}(${2:param} ${3:type}) ${4:type} {",
+      "    return $0",
+      "}"
+    ],
+    "description": "Go function"
+  },
+  "Go Error Handling": {
+    "prefix": "goerr",
+    "body": [
+      "if err != nil {",
+      "    return fmt.Errorf(\"${1:error message}: %w\", err)",
+      "}"
+    ],
+    "description": "Go error handling"
+  },
+  "Go HTTP Handler": {
+    "prefix": "gohandler",
+    "body": [
+      "func ${1:handlerName}(w http.ResponseWriter, r *http.Request) {",
+      "    ${2:w.WriteHeader}(http.StatusOK)",
+      "    $0",
+      "}"
+    ],
+    "description": "Go HTTP handler"
+  },
+  "Go Struct": {
+    "prefix": "gostruct",
+    "body": [
+      "type ${1:StructName} struct {",
+      "    ${2:Field} ${3:string}",
+      "}"
+    ],
+    "description": "Go struct"
+  },
+  "Go Interface": {
+    "prefix": "gointerface",
+    "body": [
+      "type ${1:InterfaceName} interface {",
+      "    ${2:MethodName}() ${3:returnType}",
+      "}"
+    ],
+    "description": "Go interface"
+  },
+  "Go Test": {
+    "prefix": "gotest",
+    "body": [
+      "func Test${1:FunctionName}(t *testing.T) {",
+      "    ${2:got} := ${3:want}",
+      "    ${4:want} := ${5:value}",
+      "    if got != want {",
+      "        t.Errorf(\"got %v, want %v\", got, want)",
+      "    }",
+      "}"
+    ],
+    "description": "Go test function"
+  },
+  "Go Slice": {
+    "prefix": "goslice",
+    "body": [
+      "make([]${1:string}, 0, ${2:capacity})"
+    ],
+    "description": "Go slice with make"
+  }
+}

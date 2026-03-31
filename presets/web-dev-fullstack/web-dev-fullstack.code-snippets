@@ -1,0 +1,104 @@
+{
+  "Express Router": {
+    "prefix": "exproute",
+    "body": [
+      "const express = require('express');",
+      "const router = express.Router();",
+      "",
+      "router.get('/', (req, res) => {",
+      "  $0",
+      "});",
+      "",
+      "module.exports = router;"
+    ],
+    "description": "Express router setup"
+  },
+  "Express Middleware": {
+    "prefix": "expmw",
+    "body": [
+      "const ${1:middlewareName} = (req, res, next) => {",
+      "  ${2:console.log('Middleware');}",
+      "  next();",
+      "};"
+    ],
+    "description": "Express middleware function"
+  },
+  "Mongoose Schema": {
+    "prefix": "mogs",
+    "body": [
+      "const mongoose = require('mongoose');",
+      "",
+      "const ${1:SchemaName}Schema = new mongoose.Schema({",
+      "  ${2:field}: {",
+      "    type: ${3:String},",
+      "    required: true",
+      "  }",
+      "});",
+      "",
+      "module.exports = mongoose.model('${1:SchemaName}', ${1:SchemaName}Schema);"
+    ],
+    "description": "Mongoose schema"
+  },
+  "Async Handler": {
+    "prefix": "async",
+    "body": [
+      "const ${1:handlerName} = async (req, res) => {",
+      "  try {",
+      "    ${2:const result = await ${3:someAsyncFunction}();}",
+      "    res.json(result);",
+      "  } catch (error) {",
+      "    res.status(500).json({ error: error.message });",
+      "  }",
+      "};"
+    ],
+    "description": "Async request handler"
+  },
+  "React Arrow Function Component": {
+    "prefix": "rafce",
+    "body": [
+      "import React from 'react';",
+      "",
+      "const ${1:ComponentName} = () => {",
+      "  return (",
+      "    <div>",
+      "      $0",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:ComponentName};"
+    ],
+    "description": "React arrow function component"
+  },
+  "Fetch API": {
+    "prefix": "fetchapi",
+    "body": [
+      "const fetchData = async () => {",
+      "  try {",
+      "    const response = await fetch('${1:url}');",
+      "    if (!response.ok) {",
+      "      throw new Error(`HTTP error! status: ${response.status}`);",
+      "    }",
+      "    const data = await response.json();",
+      "    return data;",
+      "  } catch (error) {",
+      "    console.error('Fetch error:', error);",
+      "  }",
+      "};"
+    ],
+    "description": "Fetch with async/await"
+  },
+  "Docker Compose Service": {
+    "prefix": "dcserv",
+    "body": [
+      "services:",
+      "  ${1:service_name}:",
+      "    image: ${2:image_name}",
+      "    ports:",
+      "      - \"${3:8080}:${4:80}\"",
+      "    environment:",
+      "      - ${5:KEY}=${6:value}"
+    ],
+    "description": "Docker Compose service"
+  }
+}

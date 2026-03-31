@@ -1,0 +1,26 @@
+{
+  "editor.fontSize": 14,
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 4,
+  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.formatting.provider": "black",
+  "jupyter.askForKernelRestart": false,
+  "jupyter.interactiveWindow.textEditor.executeSelection": true,
+  "notebook.cellToolbarLocation": {
+    "default": "right"
+  },
+  "notebook.lineNumbers": "on",
+  "editor.rulers": [88],
+  "files.autoSave": "afterDelay",
+  "editor.minimap.enabled": true,
+  "editor.wordWrap": "on",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on"
+  },
+  "jupyter.showCellInputBar": true
+}

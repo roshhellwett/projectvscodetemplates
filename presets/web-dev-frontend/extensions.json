@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "formulahendry.auto-rename-tag",
+    "christian-kohler.path-intellisense",
+    "bradlc.vscode-tailwindcss",
+    "pkief.material-icon-theme",
+    "dsznajder.es7-react-js-snippets",
+    "ms-vscode.powershell",
+    "stylelint.vscode-stylelint",
+    "pranaygp.vscode-peacock",
+    "usernamehw.errorlens"
+  ],
+  "unwantedRecommendations": []
+}

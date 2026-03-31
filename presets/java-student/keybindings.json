@@ -1,0 +1,27 @@
+[
+  {
+    "key": "shift+f10",
+    "command": "java.debug.runMainClass"
+  },
+  {
+    "key": "ctrl+shift+d",
+    "command": "workbench.view.debug"
+  },
+  {
+    "key": "ctrl+shift+f5",
+    "command": "java.debug.startWithDebug"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+shift+/",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "test-explorer.run"
+  }
+]

@@ -1,0 +1,69 @@
+{
+  "Rust Main": {
+    "prefix": "rsmain",
+    "body": [
+      "fn main() {",
+      "    $0",
+      "}"
+    ],
+    "description": "Rust main function"
+  },
+  "Rust Function": {
+    "prefix": "rsfn",
+    "body": [
+      "fn ${1:function_name}(${2:param}: ${3:type}) -> ${4:ReturnType} {",
+      "    $0",
+      "}"
+    ],
+    "description": "Rust function"
+  },
+  "Rust Struct": {
+    "prefix": "rsstruct",
+    "body": [
+      "struct ${1:StructName} {",
+      "    ${2:field}: ${3:Type},",
+      "}"
+    ],
+    "description": "Rust struct"
+  },
+  "Rust Impl": {
+    "prefix": "rsimpl",
+    "body": [
+      "impl ${1:StructName} {",
+      "    fn ${2:method}(${3:self}) {",
+      "        $0",
+      "    }",
+      "}"
+    ],
+    "description": "Rust impl block"
+  },
+  "Rust Match": {
+    "prefix": "rsmatch",
+    "body": [
+      "match ${1:value} {",
+      "    ${2:pattern} => ${3:result},",
+      "    _ => ${4:default},",
+      "}"
+    ],
+    "description": "Rust match expression"
+  },
+  "Rust Result": {
+    "prefix": "rsresult",
+    "body": [
+      "fn ${1:function}() -> Result<${2:T}, ${3:Error}> {",
+      "    ${4:Ok}(${5:value})",
+      "}"
+    ],
+    "description": "Rust Result return type"
+  },
+  "Rust Test": {
+    "prefix": "rstest",
+    "body": [
+      "#[test]",
+      "fn ${1:test_name}() {",
+      "    assert_eq!(${2:expected}, ${3:actual});",
+      "}"
+    ],
+    "description": "Rust unit test"
+  }
+}

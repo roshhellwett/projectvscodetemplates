@@ -1,0 +1,26 @@
+[
+  {
+    "key": "ctrl+shift+p",
+    "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+k ctrl+=",
+    "command": "workbench.action.terminal.resizeTerminalUp"
+  },
+  {
+    "key": "ctrl+k ctrl+-",
+    "command": "workbench.action.terminal.resizeTerminalDown"
+  },
+  {
+    "key": "ctrl+shift+x",
+    "command": "workbench.view.extensions"
+  },
+  {
+    "key": "ctrl+shift+e",
+    "command": "workbench.view.explorer"
+  }
+]

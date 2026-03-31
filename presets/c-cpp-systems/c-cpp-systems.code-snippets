@@ -1,0 +1,88 @@
+{
+  "C++ Main Template": {
+    "prefix": "cmain",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      "int main() {",
+      "    ios_base::sync_with_stdio(false);",
+      "    cin.tie(NULL);",
+      "    ",
+      "    $0",
+      "    ",
+      "    return 0;",
+      "}"
+    ],
+    "description": "C++ main template"
+  },
+  "C++ Class": {
+    "prefix": "cclass",
+    "body": [
+      "class ${1:ClassName} {",
+      "private:",
+      "    ${2:int} ${3:m_field};",
+      "public:",
+      "    ${1:ClassName}() = default;",
+      "    ",
+      "    explicit ${1:ClassName}(${2:int} field) : ${3:m_field}(field) {}",
+      "    ",
+      "    ${2:int} getField() const { return ${3:m_field}; }",
+      "    void setField(${2:int} field) { ${3:m_field} = field; }",
+      "    ",
+      "    ~${1:ClassName}() = default;",
+      "};"
+    ],
+    "description": "C++ class with encapsulation"
+  },
+  "CMake Target": {
+    "prefix": "cmake",
+    "body": [
+      "cmake_minimum_required(VERSION 3.10)",
+      "project(${1:ProjectName})",
+      "",
+      "set(CMAKE_CXX_STANDARD 17)",
+      "set(CMAKE_CXX_STANDARD_REQUIRED ON)",
+      "",
+      "add_executable(\${PROJECT_NAME} main.cpp)"
+    ],
+    "description": "CMakeLists.txt template"
+  },
+  "Makefile Rule": {
+    "prefix": "mkrule",
+    "body": [
+      "${1:target}: ${2:dependencies}",
+      "\t${3:commands}"
+    ],
+    "description": "Makefile rule"
+  },
+  "RAII Guard": {
+    "prefix": "raii",
+    "body": [
+      "class ${1:Guard} {",
+      "public:",
+      "    explicit ${1:Guard}(${2:Resource}& resource) : resource_(resource) {",
+      "        ${3:acquire();}",
+      "    }",
+      "    ",
+      "    ~${1:Guard}() {",
+      "        ${4:release();}",
+      "    }",
+      "private:",
+      "    ${2:Resource}& resource_;",
+      "};"
+    ],
+    "description": "RAII guard pattern"
+  },
+  "GDB Breakpoint": {
+    "prefix": "gdbbp",
+    "body": [
+      "break ${1:function_name}",
+      "run ${2:args}",
+      "print ${3:variable}",
+      "next",
+      "continue"
+    ],
+    "description": "GDB debugging commands"
+  }
+}

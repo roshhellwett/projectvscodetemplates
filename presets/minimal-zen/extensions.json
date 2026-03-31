@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "usernamehw.errorlens",
+    "pkief.material-icon-theme",
+    "mupubarg.markdown-preview-enhanced",
+    "notacity.markdown-extended",
+    "streetsidesoftware.code-spell-checker"
+  ],
+  "unwantedRecommendations": [
+    "ms-python.python",
+    "ms-vscode.cpptools"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "React Arrow Function Component": {
+    "prefix": "rafce",
+    "body": [
+      "import React from 'react';",
+      "",
+      "const ${1:ComponentName} = () => {",
+      "  return (",
+      "    <div>",
+      "      $0",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:ComponentName};"
+    ],
+    "description": "React arrow function component with export"
+  },
+  "Console Log Debug": {
+    "prefix": "clog",
+    "body": [
+      "console.log('${1:label}:', ${2:variable});"
+    ],
+    "description": "Labeled console.log for debugging"
+  },
+  "Fetch API": {
+    "prefix": "fetchapi",
+    "body": [
+      "const fetchData = async () => {",
+      "  try {",
+      "    const response = await fetch('${1:url}');",
+      "    if (!response.ok) {",
+      "      throw new Error(`HTTP error! status: ${response.status}`);",
+      "    }",
+      "    const data = await response.json();",
+      "    ${2:console.log(data)};",
+      "  } catch (error) {",
+      "    console.error('Fetch error:', error);",
+      "  }",
+      "};"
+    ],
+    "description": "Fetch with async/await and error handling"
+  },
+  "useState Hook": {
+    "prefix": "usest",
+    "body": [
+      "const [${1:state}, set${1:State}] = useState(${2:${3:initialValue}});"
+    ],
+    "description": "useState hook with setter"
+  },
+  "Todo Comment": {
+    "prefix": "todo",
+    "body": [
+      "// TODO: ${1:description}"
+    ],
+    "description": "TODO comment"
+  }
+}

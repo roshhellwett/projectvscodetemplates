@@ -1,0 +1,33 @@
+{
+  "editor.fontSize": 13,
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": true,
+  "workbench.colorTheme": "Solarized Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "files.autoSave": "afterDelay",
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "terminal.integrated.cursorStyle": "line",
+  "remote.SSH.showLoginTerminal": true,
+  "remote.SSH.configFile": "~/.ssh/config",
+  "docker.dockerPath": "docker",
+  "docker.dockerComposePath": "docker-compose",
+  "yaml.schemas": {
+    "kubernetes": "*.k8s.yaml",
+    "terraform": "*.tf"
+  },
+  "yaml.validate": true,
+  "yaml.format.enable": true,
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  }
+}

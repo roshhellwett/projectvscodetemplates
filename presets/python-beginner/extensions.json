@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.pylance",
+    "ms-python.black-formatter",
+    "njpwerner.autodocstring",
+    "usernamehw.errorlens",
+    "pkief.material-icon-theme",
+    "zhuangtongfa.material-theme",
+    "formulahendry.code-runner",
+    "streetsidesoftware.code-spell-checker"
+  ],
+  "unwantedRecommendations": []
+}

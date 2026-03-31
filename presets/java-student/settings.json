@@ -1,0 +1,36 @@
+{
+  "editor.fontSize": 14,
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "on",
+  "workbench.colorTheme": "Dracula",
+  "workbench.iconTheme": "EQ-R PittVet-Dracula",
+  "java.home": "",
+  "java.jdt.ls.java.home": "",
+  "java.configuration.runtimes": [],
+  "java.import.gradle.java.home": "",
+  "java.import.maven.enabled": true,
+  "java.imports.gradle.enabled": true,
+  "java.import.gradle.wrapper.enabled": true,
+  "java.project.sourcePaths": ["src"],
+  "java.project.outputPath": "bin",
+  "java.autobuild.enabled": true,
+  "java.errors.incompleteClasspath.severity": "warning",
+  "java.codeGeneration.hashCodeEquals.useObjects": true,
+  "java.codeGeneration.toString.template": "${object.className}{${member.name()}=${member.value}, ${otherMembers}}",
+  "java.codeGeneration.generateComments": true,
+  "java.completion.favoriteStaticMembers": [
+    "org.junit.Assert.*",
+    "org.mockito.Mockito.*",
+    "java.util.Collections.*",
+    "java.time.Duration.*"
+  ],
+  "java.inlayHints.parameterNames.enabled": true,
+  "terminal.integrated.fontSize": 13,
+  "files.autoSave": "afterDelay",
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  }
+}

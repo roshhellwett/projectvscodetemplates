@@ -1,0 +1,26 @@
+[
+  {
+    "key": "ctrl+shift+enter",
+    "command": "jupyter.executeCell",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "jupyter.executeCellAndSelectBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+enter",
+    "command": "jupyter.executeCellAndSelectBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+shift+f",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly"
+  }
+]

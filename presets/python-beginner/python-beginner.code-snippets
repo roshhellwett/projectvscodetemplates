@@ -1,0 +1,65 @@
+{
+  "Python Main Block": {
+    "prefix": "pymain",
+    "body": [
+      "if __name__ == \"__main__\":",
+      "    $0"
+    ],
+    "description": "Creates a Python main block"
+  },
+  "Python Class": {
+    "prefix": "pyclass",
+    "body": [
+      "class ${1:ClassName}:",
+      "    def __init__(self${2:: int}):",
+      "        ${3:self.${4:attribute} = ${5:value}}",
+      "    ",
+      "    def __str__(self):",
+      "        return f\"${1:ClassName}(${2:attributes})\"",
+      "    ",
+      "    def __repr__(self):",
+      "        return self.__str__()"
+    ],
+    "description": "Creates a Python class with __init__ and __str__"
+  },
+  "Python Input Read": {
+    "prefix": "pyread",
+    "body": [
+      "# Read a single integer",
+      "n = int(input())",
+      "",
+      "# Read multiple integers on one line",
+      "a, b, c = map(int, input().split())",
+      "",
+      "# Read list of integers",
+      "arr = list(map(int, input().split()))"
+    ],
+    "description": "Common input patterns in Python"
+  },
+  "Python Debug Print": {
+    "prefix": "pydebug",
+    "body": [
+      "print(f\"DEBUG: {${1:variable}=}\")"
+    ],
+    "description": "Debug print with variable name and value"
+  },
+  "Python List Comprehension": {
+    "prefix": "pylist",
+    "body": [
+      "${1:result} = [${2:expression} for ${3:x} in ${4:iterable}${5: if ${6:condition}}]"
+    ],
+    "description": "List comprehension template"
+  },
+  "Python Try Except": {
+    "prefix": "pytry",
+    "body": [
+      "try:",
+      "    ${1:pass}",
+      "except ${2:Exception} as ${3:e}:",
+      "    ${4:print(f\"Error: {e}\")}",
+      "finally:",
+      "    ${5:pass}"
+    ],
+    "description": "Try/except/finally block"
+  }
+}

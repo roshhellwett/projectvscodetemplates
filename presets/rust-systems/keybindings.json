@@ -1,0 +1,28 @@
+[
+  {
+    "key": "ctrl+shift+b",
+    "command": "cargo.build"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "cargo.test"
+  },
+  {
+    "key": "ctrl+shift+r",
+    "command": "cargo.run"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+shift+/",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "f5",
+    "command": "lldb.launch",
+    "when": "editorTextFocus"
+  }
+]

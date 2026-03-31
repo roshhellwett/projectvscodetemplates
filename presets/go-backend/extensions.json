@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "golang.go",
+    "golang.go-dev-tools",
+    "hbenl.vscode-test-explorer",
+    "ms-vscode.vscode-typescript-next",
+    "esbenp.prettier-vscode",
+    "streetsidesoftware.code-spell-checker",
+    "usernamehw.errorlens",
+    "editorconfig.editorconfig"
+  ],
+  "unwantedRecommendations": []
+}

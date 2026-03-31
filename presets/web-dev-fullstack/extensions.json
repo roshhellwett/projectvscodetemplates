@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "prisma.prisma",
+    "mtxr.sqltools",
+    "ms-azuretools.vscode-docker",
+    "ms-python.python",
+    "ms-python.pylance",
+    "christian-kohler.path-intellisense",
+    "formulahendry.auto-rename-tag",
+    "bradlc.vscode-tailwindcss",
+    "ms-vscode.vscode-typescript-next",
+    "pkief.material-icon-theme"
+  ],
+  "unwantedRecommendations": []
+}

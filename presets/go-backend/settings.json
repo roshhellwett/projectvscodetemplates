@@ -1,0 +1,29 @@
+{
+  "editor.fontSize": 14,
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "off",
+  "editor.minimap.enabled": false,
+  "workbench.colorTheme": "Monokai",
+  "workbench.iconTheme": "material-icon-theme",
+  "go.formatTool": "gofmt",
+  "go.lintTool": "golangci-lint",
+  "go.useLanguageServer": true,
+  "go.alternateTools": {
+    "go": "go"
+  },
+  "go.testFlags": ["-v", "-count=1"],
+  "go.coverageOptions": "toggle",
+  "go.gotoSymbol.includeImports": true,
+  "go.inlayHints.functionParameters": true,
+  "go.inlayHints.variableTypes": true,
+  "go.inlayHints.parameterNames": true,
+  "terminal.integrated.fontSize": 13,
+  "files.autoSave": "afterDelay",
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  }
+}

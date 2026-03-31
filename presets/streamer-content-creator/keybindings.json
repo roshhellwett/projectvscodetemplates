@@ -1,0 +1,34 @@
+[
+  {
+    "key": "ctrl+shift+p",
+    "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "ctrl+shift+1",
+    "command": "peacock.changeColorToAngular",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+2",
+    "command": "peacock.changeColorToReact",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+3",
+    "command": "peacock.changeColorToVue",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+k z",
+    "command": "workbench.action.toggleZenMode"
+  },
+  {
+    "key": "ctrl+shift+f",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.toggleTerminal"
+  }
+]
