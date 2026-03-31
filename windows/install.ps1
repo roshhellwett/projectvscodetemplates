@@ -8,6 +8,9 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
+if ($null -ne (Get-Variable -Name PSNativeCommandUseErrorActionPreference -ErrorAction SilentlyContinue)) {
+    $PSNativeCommandUseErrorActionPreference = $false
+}
 
 $InstallerVersion = "1.0.0"
 $RepoSlug = "zenithopensourceprojects/projectvscodetemplates"
@@ -170,7 +173,11 @@ function Install-ExtensionsFromFile {
     Write-Section "Installing Recommended Extensions"
     foreach ($extension in $extensions) {
         Write-Host "Installing $extension..." -ForegroundColor Yellow
-        & $codeCmd.Source --install-extension $extension --force 2>$null | Out-Null
+        try {
+            & $codeCmd.Source --install-extension $extension --force 2>$null | Out-Null
+        } catch {
+            $global:LASTEXITCODE = 1
+        }
         if ($LASTEXITCODE -eq 0) {
             Write-Success "$extension installed"
         } else {

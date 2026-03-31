@@ -26,7 +26,7 @@ function Copy-Tree {
     )
 
     New-Item -ItemType Directory -Path $Destination -Force | Out-Null
-    Copy-Item -LiteralPath (Join-Path $Source "*") -Destination $Destination -Recurse -Force
+    Copy-Item -Path (Join-Path $Source "*") -Destination $Destination -Recurse -Force
 }
 
 New-CleanDirectory -Path $OutputDir
