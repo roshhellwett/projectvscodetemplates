@@ -6,3 +6,6 @@ node_modules
 .env
 .vscode-test
 *.log
+.tmp-appdata*
+.stress-*
+.stressfast-*
