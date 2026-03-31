@@ -1,0 +1,90 @@
+{
+  "Flutter Stateless Widget": {
+    "prefix": "flstl",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "",
+      "class ${1:WidgetName} extends StatelessWidget {",
+      "  const ${1:WidgetName}({super.key});",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return ${2:Container()};",
+      "  }",
+      "}"
+    ],
+    "description": "Flutter stateless widget"
+  },
+  "Flutter Stateful Widget": {
+    "prefix": "flstf",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "",
+      "class ${1:WidgetName} extends StatefulWidget {",
+      "  const ${1:WidgetName}({super.key});",
+      "",
+      "  @override",
+      "  State<${1:WidgetName}> createState() => _${1:WidgetName}State();",
+      "}",
+      "",
+      "class _${1:WidgetName}State extends State<${1:WidgetName}> {",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return Container();",
+      "  }",
+      "}"
+    ],
+    "description": "Flutter stateful widget"
+  },
+  "Flutter Main": {
+    "prefix": "flmain",
+    "body": [
+      "void main() {",
+      "  runApp(const MyApp());",
+      "}",
+      "",
+      "class MyApp extends StatelessWidget {",
+      "  const MyApp({super.key});",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return MaterialApp(",
+      "      home: const Scaffold(",
+      "        body: Center(",
+      "          child: Text('Hello World'),",
+      "        ),",
+      "      ),",
+      "    );",
+      "  }",
+      "}"
+    ],
+    "description": "Flutter main entry point"
+  },
+  "Flutter Future Builder": {
+    "prefix": "flfuture",
+    "body": [
+      "FutureBuilder<${1:String}>(",
+      "  future: ${2:fetchData()\},",
+      "  builder: (context, snapshot) {",
+      "    if (snapshot.connectionState == ConnectionState.waiting) {",
+      "      return const CircularProgressIndicator();",
+      "    } else if (snapshot.hasError) {",
+      "      return Text('Error: ${snapshot.error}');",
+      "    }",
+      "    return Text(snapshot.data ?? '');",
+      "  },",
+      ");"
+    ],
+    "description": "Flutter FutureBuilder"
+  },
+  "Dart Constructor": {
+    "prefix": "dcon",
+    "body": [
+      "const ${1:ClassName}({",
+      "  super.key,",
+      "  required this.${2:field},",
+      "});"
+    ],
+    "description": "Dart constructor with required fields"
+  }
+}

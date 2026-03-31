@@ -10,6 +10,7 @@
     "hashicorp.terraform",
     "ms-kubernetes-tools.vscode-kubernetes-tools",
     "ms-cloudfoundry.cloudfoundry-platform-client",
+    "esbenp.prettier-vscode",
     "streetsidesoftware.code-spell-checker"
   ],
   "unwantedRecommendations": []

@@ -5,6 +5,7 @@
     "ms-vscode-remote.vscode-remote-extensionpack",
     "editorconfig.editorconfig",
     "redhat.vscode-yaml",
+    "esbenp.prettier-vscode",
     "streetsidesoftware.code-spell-checker"
   ],
   "unwantedRecommendations": []

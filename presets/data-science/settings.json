@@ -5,7 +5,6 @@
   "editor.tabSize": 4,
   "workbench.colorTheme": "GitHub Dark Dimmed",
   "python.analysis.typeCheckingMode": "basic",
-  "python.formatting.provider": "black",
   "jupyter.askForKernelRestart": false,
   "jupyter.interactiveWindow.textEditor.executeSelection": true,
   "notebook.cellToolbarLocation": {

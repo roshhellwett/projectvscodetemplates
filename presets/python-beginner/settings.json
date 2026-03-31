@@ -20,7 +20,6 @@
   "terminal.integrated.fontFamily": "JetBrains Mono",
   "python.defaultInterpreterPath": "python",
   "python.analysis.typeCheckingMode": "basic",
-  "python.formatting.provider": "black",
   "editor.rulers": [79],
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,

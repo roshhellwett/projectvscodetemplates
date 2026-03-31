@@ -1,0 +1,34 @@
+{
+  "Markdown Link": {
+    "prefix": "mdlink",
+    "body": [
+      "[${1:text}](${2:url})"
+    ],
+    "description": "Markdown link"
+  },
+  "Markdown Image": {
+    "prefix": "mdimg",
+    "body": [
+      "![${1:alt text}](${2:image-url})"
+    ],
+    "description": "Markdown image"
+  },
+  "Markdown Table Row": {
+    "prefix": "mdrow",
+    "body": [
+      "| ${1:Column1} | ${2:Column2} | ${3:Column3} |",
+      "|-----------|-----------|-----------|",
+      "| ${4:data1}  | ${5:data2}  | ${6:data3}  |"
+    ],
+    "description": "Markdown table row template"
+  },
+  "Markdown Code Block": {
+    "prefix": "mdcode",
+    "body": [
+      "```${1:language}",
+      "$0",
+      "```"
+    ],
+    "description": "Markdown code block"
+  }
+}

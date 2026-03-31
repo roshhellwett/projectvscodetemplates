@@ -26,7 +26,7 @@ Quiet Light theme - soft, paper-like, restful. Almost nothing on screen except y
 
 | Setting | Value | Why |
 |---|---|---|
-| `workbench.activityBar.visible` | false | No activity bar |
+| `workbench.activityBar.location` | `hidden` | No activity bar |
 | `workbench.statusBar.visible` | false | No status bar |
 | `workbench.sideBar.visible` | false | No file explorer |
 | `workbench.editor.showTabs` | none | Tab-free |

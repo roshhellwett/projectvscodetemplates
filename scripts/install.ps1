@@ -8,9 +8,10 @@ param(
     [switch]$Version = $false
 )
 
-$VERSION = "1.0.0"
+$InstallerVersion = "1.0.0"
 $GITHUB_REPO = "zenithopensourceprojects/projectvscodetemplates"
 $INSTALL_URL = "https://raw.githubusercontent.com/$GITHUB_REPO/main/scripts/install.ps1"
+$ScriptDir = $PSScriptRoot
 
 function Show-Help {
     Write-Host ""
@@ -31,12 +32,11 @@ function Show-Help {
 }
 
 function Show-Version {
-    Write-Host "ProjectVSCode Presets Installer v$VERSION"
+    Write-Host "ProjectVSCode Presets Installer v$InstallerVersion"
 }
 
 function Show-Presets {
-    $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
-    $manifestFile = Join-Path $scriptDir "..\presets\manifest.json"
+    $manifestFile = Join-Path $ScriptDir "..\presets\manifest.json"
 
     if (Test-Path $manifestFile) {
         Write-Host ""
@@ -93,8 +93,7 @@ function Install-Preset {
     Write-Host ""
     Write-Host "Installing preset: $PresetId" -ForegroundColor Cyan
 
-    $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
-    $localPreset = Join-Path $scriptDir "..\presets\$PresetId"
+    $localPreset = Join-Path $ScriptDir "..\presets\$PresetId"
     $remoteUrl = "https://raw.githubusercontent.com/$GITHUB_REPO/main/presets/$PresetId"
 
     $presetPath = $null
@@ -180,13 +179,13 @@ function Install-Preset {
     Write-Host "Installing extensions in VS Code..." -ForegroundColor Cyan
 
     $extensionsFile = Join-Path $configDir "extensions.json"
-    if (Test-Path $extensionsFile) {
+    $codeCli = Get-Command code -ErrorAction SilentlyContinue
+    if ($codeCli -and (Test-Path $extensionsFile)) {
         $extData = Get-Content $extensionsFile | ConvertFrom-Json
         foreach ($ext in $extData.recommendations) {
             Write-Host "Installing: $ext" -ForegroundColor Yellow
-            try {
-                code --install-extension $ext --force 2>$null
-            } catch {
+            & $codeCli.Source --install-extension $ext --force 2>$null | Out-Null
+            if ($LASTEXITCODE -ne 0) {
                 Write-Host "  (requires VS Code restart)" -ForegroundColor Yellow
             }
         }
@@ -194,6 +193,8 @@ function Install-Preset {
     } else {
         Write-Host "VS Code CLI not found. Extensions will be suggested when you open VS Code." -ForegroundColor Yellow
     }
+
+    $global:LASTEXITCODE = 0
 
     Write-Host ""
     Write-Host @"

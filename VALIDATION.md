@@ -19,7 +19,7 @@ PRESET QUALITY
 UPGRADE PATHS (connects_to)
   [PASS] python-beginner -> python-professional
   [PASS] competitive-programming -> c-cpp-systems
-  [PASS] java-student -> competitive-programming, android-studio
+  [PASS] java-student -> competitive-programming
   [PASS] web-dev-frontend -> web-dev-fullstack
   [PASS] data-science -> python-professional
   [PASS] devops-cloud -> remote-ssh-server

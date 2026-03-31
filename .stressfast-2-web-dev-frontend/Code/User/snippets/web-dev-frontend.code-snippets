@@ -1,0 +1,94 @@
+{
+  "React Arrow Function Component": {
+    "prefix": "rafce",
+    "body": [
+      "import React from 'react';",
+      "",
+      "const ${1:ComponentName} = () => {",
+      "  return (",
+      "    <div>",
+      "      $0",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:ComponentName};"
+    ],
+    "description": "React arrow function component with export"
+  },
+  "useState Hook": {
+    "prefix": "usest",
+    "body": [
+      "const [${1:state}, set${1:State}] = useState(${2:${3:initialValue}});"
+    ],
+    "description": "useState hook with setter"
+  },
+  "useEffect Hook": {
+    "prefix": "useef",
+    "body": [
+      "useEffect(() => {",
+      "  ${1:effect}",
+      "  return () => {",
+      "    ${2:cleanup}",
+      "  };",
+      "}, [${3:dependencies}]);"
+    ],
+    "description": "useEffect with cleanup"
+  },
+  "Tailwind Card": {
+    "prefix": "twcard",
+    "body": [
+      "<div className=\"bg-white rounded-lg shadow-md p-6\">",
+      "  <h2 className=\"text-xl font-bold mb-4\">${1:Title}</h2>",
+      "  <p className=\"text-gray-600\">${2:Content}</p>",
+      "</div>"
+    ],
+    "description": "Tailwind card div template"
+  },
+  "Fetch API": {
+    "prefix": "fetchapi",
+    "body": [
+      "const fetchData = async () => {",
+      "  try {",
+      "    const response = await fetch('${1:url}');",
+      "    if (!response.ok) {",
+      "      throw new Error(`HTTP error! status: ${response.status}`);",
+      "    }",
+      "    const data = await response.json();",
+      "    ${2:console.log(data)};",
+      "  } catch (error) {",
+      "    console.error('Fetch error:', error);",
+      "  }",
+      "};"
+    ],
+    "description": "Fetch with async/await and error handling"
+  },
+  "Console Log Debug": {
+    "prefix": "clog",
+    "body": [
+      "console.log('${1:label}:', ${2:variable});"
+    ],
+    "description": "Labeled console.log for debugging"
+  },
+  "React useMemo": {
+    "prefix": "usememo",
+    "body": [
+      "const ${1:memoizedValue} = useMemo(() => {",
+      "  return ${2:computeExpensiveValue}(${3:dependencies});",
+      "}, [${3:dependencies}]);"
+    ],
+    "description": "useMemo hook for memoization"
+  },
+  "React useCallback": {
+    "prefix": "usecb",
+    "body": [
+      "const ${1:callback} = useCallback(",
+      "  () => {",
+      "    ${2:callbackBody}",
+      "  },",
+      "  [${3:dependencies}],",
+      ");"
+    ],
+    "description": "useCallback hook for memoized callbacks"
+  }
+}

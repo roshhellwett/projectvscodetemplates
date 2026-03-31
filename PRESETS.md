@@ -14,13 +14,13 @@ Complete comparison and upgrade paths for all ProjectVSCode Presets.
 | web-dev-fullstack | Fullstack Node.js | 14px | GitHub Dark | 12 | ⭐⭐ |
 | c-cpp-systems | Systems programmers | 13px | Monokai | 9 | ⭐⭐ |
 | data-science | Data scientists | 14px | GitHub Dark Dimmed | 10 | ⭐⭐ |
-| devops-cloud | DevOps, Cloud | 13px | Solarized Dark | 11 | ⭐⭐ |
+| devops-cloud | DevOps, Cloud | 13px | Solarized Dark | 12 | ⭐⭐ |
 | mobile-flutter | Flutter developers | 14px | Flutter | 8 | ⭐⭐ |
 | rust-systems | Rust developers | 14px | One Dark Pro | 7 | ⭐⭐⭐ |
-| go-backend | Go developers | 14px | Monokai | 8 | ⭐⭐ |
+| go-backend | Go developers | 14px | Monokai | 7 | ⭐⭐ |
 | minimal-zen | Writers, minimalists | 15px | Quiet Light | 5 | ⭐ |
-| streamer-content-creator | YouTubers, streamers | 17px | One Dark Pro | 9 | ⭐ |
-| remote-ssh-server | Remote workers | 13px | Solarized Dark | 6 | ⭐⭐ |
+| streamer-content-creator | YouTubers, streamers | 17px | One Dark Pro | 10 | ⭐ |
+| remote-ssh-server | Remote workers | 13px | Solarized Dark | 7 | ⭐⭐ |
 
 ## Preset Upgrade Paths
 
@@ -98,18 +98,18 @@ These presets are complete for their use cases:
 | Category | Preset | Count |
 |----------|--------|-------|
 | Minimal | minimal-zen | 5 |
-| Minimal | remote-ssh-server | 6 |
+| Minimal | remote-ssh-server | 7 |
 | Light | rust-systems | 7 |
 | Light | competitive-programming | 8 |
 | Light | java-student | 8 |
-| Light | go-backend | 8 |
+| Light | go-backend | 7 |
 | Light | mobile-flutter | 8 |
-| Medium | streamer-content-creator | 9 |
+| Medium | streamer-content-creator | 10 |
 | Medium | c-cpp-systems | 9 |
 | Medium | python-beginner | 9 |
 | Medium | data-science | 10 |
 | Medium | web-dev-frontend | 11 |
-| Medium | devops-cloud | 11 |
+| Medium | devops-cloud | 12 |
 | Heavy | python-professional | 12 |
 | Heavy | web-dev-fullstack | 12 |
 

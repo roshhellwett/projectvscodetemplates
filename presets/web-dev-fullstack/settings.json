@@ -41,8 +41,5 @@
   },
   "files.autoSave": "afterDelay",
   "terminal.integrated.fontSize": 13,
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter"
-  },
   "python.analysis.typeCheckingMode": "basic"
 }

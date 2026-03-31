@@ -50,7 +50,7 @@
       "recommended_theme": "Dracula",
       "extension_count": 8,
       "tags": ["java", "student", "university", "maven", "gradle"],
-      "connects_to": ["competitive-programming", "android-studio"]
+      "connects_to": ["competitive-programming"]
     },
     {
       "id": "web-dev-frontend",
@@ -113,7 +113,7 @@
       "description": "Docker, Kubernetes, Terraform, and cloud CLI tools. SSH connections, YAML editing, and infrastructure as code support.",
       "target_user": "DevOps engineers, SREs, cloud architects",
       "recommended_theme": "Solarized Dark",
-      "extension_count": 11,
+      "extension_count": 12,
       "tags": ["docker", "kubernetes", "terraform", "aws", "azure", "gcp", "yaml", "devops"],
       "connects_to": ["remote-ssh-server"]
     },
@@ -152,7 +152,7 @@
       "description": "Go/Golang development with gofmt, golint, and backend-specific optimizations. Fast compilation and testing workflows.",
       "target_user": "Go developers, backend engineers, API developers",
       "recommended_theme": "Monokai",
-      "extension_count": 8,
+      "extension_count": 7,
       "tags": ["go", "golang", "backend", "api", "microservices"],
       "connects_to": ["web-dev-fullstack"]
     },
@@ -178,7 +178,7 @@
       "description": "Optimized for screen recording and live streaming. High contrast, large fonts, beautiful on camera. Peacock for quick theme switching.",
       "target_user": "YouTubers, streamers, tech educators",
       "recommended_theme": "One Dark Pro",
-      "extension_count": 9,
+      "extension_count": 10,
       "tags": ["streaming", "youtube", "recording", "content", "camera"],
       "connects_to": []
     },
@@ -191,7 +191,7 @@
       "description": "Work on remote servers via SSH directly in VS Code. Optimized for terminal work, file sync, and server administration.",
       "target_user": "DevOps engineers, remote workers, server administrators",
       "recommended_theme": "Solarized Dark",
-      "extension_count": 6,
+      "extension_count": 7,
       "tags": ["ssh", "remote", "server", "terminal", "devops"],
       "connects_to": ["devops-cloud"]
     }

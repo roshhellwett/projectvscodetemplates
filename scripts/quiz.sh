@@ -215,7 +215,8 @@ main() {
         2)
             case "$q2" in
                 1) preset_id="web-dev-frontend"; preset_name="Web Dev - Frontend"; description="React, Vue, Tailwind. Prettier + ESLint configured." ;;
-                *) preset_id="web-dev-frontend"; preset_name="Web Dev - Frontend"; description="React, Vue, Tailwind. Prettier + ESLint configured." ;;
+                2) preset_id="web-dev-frontend"; preset_name="Web Dev - Frontend"; description="React, Vue, Tailwind. Prettier + ESLint configured. You're almost ready for web-dev-fullstack." ;;
+                *) preset_id="web-dev-fullstack"; preset_name="Web Dev - Fullstack"; description="Complete fullstack setup. Node.js, databases, Docker support." ;;
             esac
             ;;
         3)
@@ -261,10 +262,26 @@ main() {
             ;;
         10)
             case "$q3" in
-                2) preset_id="streamer-content-creator"; preset_name="Streamer & Content Creator"; description="High contrast, large fonts, beautiful on camera." ;;
-                3) preset_id="minimal-zen"; preset_name="Minimal Zen"; description="Distraction-free writing. Hidden sidebars, peaceful colors." ;;
-                4) preset_id="remote-ssh-server"; preset_name="Remote SSH Server"; description="Work on remote servers via SSH with native feel." ;;
-                *) preset_id="minimal-zen"; preset_name="Minimal Zen"; description="Distraction-free writing. Hidden sidebars, peaceful colors." ;;
+                2)
+                    preset_id="streamer-content-creator"
+                    preset_name="Streamer & Content Creator"
+                    description="High contrast, large fonts, beautiful on camera."
+                    ;;
+                3)
+                    preset_id="minimal-zen"
+                    preset_name="Minimal Zen"
+                    description="Distraction-free writing. Hidden sidebars, peaceful colors."
+                    ;;
+                4)
+                    preset_id="remote-ssh-server"
+                    preset_name="Remote SSH Server"
+                    description="Work on remote servers via SSH with native feel."
+                    ;;
+                *)
+                    preset_id="minimal-zen"
+                    preset_name="Minimal Zen"
+                    description="Distraction-free writing. Hidden sidebars, peaceful colors."
+                    ;;
             esac
             ;;
     esac
