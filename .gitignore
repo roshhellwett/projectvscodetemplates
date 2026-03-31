@@ -9,3 +9,6 @@ node_modules
 .tmp-appdata*
 .stress-*
 .stressfast-*
+dist/
+*.sed
+CAB*.TMP
