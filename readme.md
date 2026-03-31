@@ -8,6 +8,8 @@
 
 Ready-made VS Code setups for students, developers, creators, and remote teams.
 
+![SAMPLE](https://github.com/roshhellwett/projectvscodetemplates/blob/45a255158543af850adc24d55df143181502b7d4/Sample/sample.png)
+
 ## What You Get
 
 - 15 curated presets for different workflows
