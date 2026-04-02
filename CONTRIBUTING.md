@@ -188,6 +188,6 @@ Found a bug in an existing preset? Please include:
 4. Expected vs actual behavior
 5. Steps to reproduce
 
-## Questions?
+---
 
-Open an issue on GitHub or reach out to the maintainers.
+© 2026 [Zenith Open Source Projects](https://zenithopensourceprojects.vercel.app/). All Rights Reserved. Zenith is a Open Source Project Idea's by @roshhellwett
