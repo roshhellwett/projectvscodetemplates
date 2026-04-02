@@ -3,6 +3,7 @@
 ![Forks](https://img.shields.io/github/forks/roshhellwett/projectvscodetemplates?style=for-the-badge)
 ![Issues](https://img.shields.io/github/issues/roshhellwett/projectvscodetemplates?style=for-the-badge)
 ![VS Code](https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+![PyPI](https://img.shields.io/pypi/v/projectvscodetemplates?style=for-the-badge)
 
 # PROJECT VSCODE TEMPLATES
 
@@ -18,6 +19,13 @@ Ready-made VS Code setups for students, developers, creators, and remote teams.
 - settings, extensions, keybindings, and snippets bundled per preset
 
 ## Install
+
+### Via pip (cross-platform)
+
+```bash
+pip install projectvscodetemplates
+projectvscodetemplates
+```
 
 ### Windows
 

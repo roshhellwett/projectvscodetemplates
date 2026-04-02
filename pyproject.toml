@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "projectvscodetemplates"
-version = "1.0.0"
+version = "1.0.1"
 description = "Ready-made VS Code configurations for developers and students"
 readme = "readme.md"
-license = {text = "MIT"}
+license = "MIT"
 requires-python = ">=3.10"
 authors = [
     {name = "Roshan Kr Singh", email = "roshankumar77630@gmail.com"}
@@ -17,14 +17,11 @@ classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Environment :: Console",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Topic :: Software Development :: IDEs",
-    "Topic :: Software Development :: Pre-processors",
 ]
 dependencies = [
     "typer[all]>=0.12.0",
