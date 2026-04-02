@@ -27,20 +27,6 @@ from projectvscodetemplates.constants import (
     ERROR_COLOR,
     WARNING_COLOR,
     INFO_COLOR,
-    MAX_ITEMS_PREVIEW,
-    PIP_CHECK_TIMEOUT,
-    MENU_EXIT,
-    MENU_BROWSE,
-    MENU_QUIZ,
-    MENU_SEARCH,
-    MENU_INSTALL,
-    MENU_VIEW,
-    MENU_UNINSTALL,
-    MENU_BACKUP,
-    MENU_EXTENSIONS,
-    MENU_UPDATE,
-    MENU_HELP,
-    MENU_ABOUT,
 )
 from projectvscodetemplates.utils import (
     print_success,
@@ -829,7 +815,7 @@ tailored for different development needs.
             else:
                 console.print("[yellow]Could not check for updates.[/]\n")
 
-        except Exception as e:
+        except (subprocess.SubprocessError, OSError) as e:
             console.print(f"[yellow]Update check failed: {e}[/]\n")
 
         pause()
@@ -961,8 +947,9 @@ MIT License
                 console.print("\n\n[yellow]Interrupted. Press 0 to exit.[/]")
                 pause()
             except Exception as e:
-                print_error(f"An error occurred: {e}")
-                pause()
+                from projectvscodetemplates.exceptions import ProjectVSCodeTemplatesError
+
+                raise ProjectVSCodeTemplatesError(str(e)) from e
 
     def _exit(self) -> None:
         """Exit the application."""

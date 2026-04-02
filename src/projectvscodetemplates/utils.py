@@ -1,10 +1,38 @@
 """Utility functions for ProjectVSCodeTemplates."""
 
+import logging
 import os
 import sys
 import subprocess
 from pathlib import Path
 from typing import Any
+
+logger = logging.getLogger(__name__)
+
+__all__ = [
+    "get_terminal_width",
+    "is_interactive",
+    "print_success",
+    "print_error",
+    "print_warning",
+    "print_info",
+    "print_header",
+    "print_section",
+    "print_menu_header",
+    "clear_screen",
+    "pause",
+    "confirm",
+    "safe_input",
+    "select_from_list",
+    "check_vscode_installed",
+    "check_vscode_running",
+    "run_command",
+    "ensure_directory",
+    "is_writable",
+    "truncate_string",
+    "format_list",
+    "with_progress",
+]
 
 from rich.console import Console
 from rich.progress import Progress, SpinnerColumn, TextColumn

@@ -1,6 +1,7 @@
 """VS Code extension management for ProjectVSCodeTemplates."""
 
 import json
+import logging
 import re
 import subprocess
 import time
@@ -8,6 +9,15 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
 from typing import Any
+
+logger = logging.getLogger(__name__)
+
+__all__ = [
+    "ExtensionInfo",
+    "ExtensionInstallResult",
+    "ExtensionSearchResult",
+    "ExtensionManager",
+]
 
 from projectvscodetemplates.presets import PresetManager, get_preset_manager
 from projectvscodetemplates.constants import (
@@ -121,7 +131,7 @@ class ExtensionManager:
             else:
                 returncode, _, _ = run_command(["which", "code"], timeout=5, capture=True)
             return returncode == 0
-        except Exception:
+        except OSError:
             return False
 
     def _run_code_command(

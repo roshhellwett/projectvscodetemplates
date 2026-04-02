@@ -1,11 +1,19 @@
 """Backup and restore functionality for ProjectVSCodeTemplates."""
 
 import json
+import logging
 import shutil
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
 from typing import Any
+
+logger = logging.getLogger(__name__)
+
+__all__ = [
+    "BackupInfo",
+    "BackupManager",
+]
 
 from projectvscodetemplates.constants import (
     get_vscode_config_dir,

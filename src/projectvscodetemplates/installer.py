@@ -1,11 +1,20 @@
 """VS Code preset installer for ProjectVSCodeTemplates."""
 
 import json
+import logging
 import shutil
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
 from typing import Any
+
+logger = logging.getLogger(__name__)
+
+__all__ = [
+    "InstallResult",
+    "InstalledPresetInfo",
+    "VSCodeInstaller",
+]
 
 from projectvscodetemplates.presets import PresetManager, get_preset_manager
 from projectvscodetemplates.constants import (

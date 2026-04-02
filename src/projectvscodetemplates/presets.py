@@ -2,11 +2,21 @@
 
 import difflib
 import json
+import logging
 import os
 from dataclasses import dataclass, field
 from functools import lru_cache
 from pathlib import Path
 from typing import Any
+
+logger = logging.getLogger(__name__)
+
+__all__ = [
+    "Preset",
+    "PresetFile",
+    "PresetManager",
+    "get_preset_manager",
+]
 
 from projectvscodetemplates.constants import (
     DIFFICULTY_COLORS,

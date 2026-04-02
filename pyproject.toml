@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "projectvscodetemplates"
-version = "1.0.8"
+version = "1.1.1"
 description = "Ready-made VS Code configurations for developers and students"
 readme = "readme.md"
 license = "MIT"
 requires-python = ">=3.10"
 authors = [
-    {name = "Roshan Kr Singh", email = "roshankumar77630@gmail.com"}
+    {name = "Roshan Kr Singh - Zenith Open Source Projects", email = "roshellwett@icloud.com"}
 ]
 keywords = ["vscode", "templates", "presets", "ide", "configuration", "productivity"]
 classifiers = [
@@ -49,7 +49,7 @@ where = ["src"]
 include = ["projectvscodetemplates*"]
 
 [tool.setuptools.package-data]
-projectvscodetemplates = ["presets/*.json", "presets/*/*.json"]
+projectvscodetemplates = ["presets/*.json", "presets/**/*.json"]
 
 [tool.ruff]
 line-length = 100
