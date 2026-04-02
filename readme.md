@@ -20,14 +20,20 @@ Ready-made VS Code setups for students, developers, creators, and remote teams.
 
 ## Install
 
-### Via pip (cross-platform)
+### Via pip (recommended - works on Windows, macOS, Linux)
 
 ```bash
 pip install projectvscodetemplates
 projectvscodetemplates
 ```
 
-### Windows
+Or run with Python:
+
+```bash
+python -m projectvscodetemplates
+```
+
+### Windows (alternative)
 
 Choose the option that feels easiest:
 
