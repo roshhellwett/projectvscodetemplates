@@ -128,6 +128,21 @@ MIN_TERMINAL_WIDTH: Final[int] = 60
 MAX_DISPLAY_LENGTH: Final[int] = 50
 MAX_BACKUPS_TO_KEEP: Final[int] = 10
 MAX_SEARCH_RESULTS: Final[int] = 20
+MAX_ITEMS_PREVIEW: Final[int] = 10
 
 INSTALL_TIMEOUT_SECONDS: Final[int] = 120
 EXTENSION_INSTALL_TIMEOUT: Final[int] = 60
+PIP_CHECK_TIMEOUT: Final[int] = 30
+
+MENU_EXIT: Final[str] = "0"
+MENU_BROWSE: Final[str] = "1"
+MENU_QUIZ: Final[str] = "2"
+MENU_SEARCH: Final[str] = "3"
+MENU_INSTALL: Final[str] = "4"
+MENU_VIEW: Final[str] = "5"
+MENU_UNINSTALL: Final[str] = "6"
+MENU_BACKUP: Final[str] = "7"
+MENU_EXTENSIONS: Final[str] = "8"
+MENU_UPDATE: Final[str] = "9"
+MENU_HELP: Final[str] = "10"
+MENU_ABOUT: Final[str] = "11"
