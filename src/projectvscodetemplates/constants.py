@@ -111,6 +111,7 @@ TRACKS: Final[list[str]] = [
 
 MENU_WIDTH: Final[int] = 45
 PANEL_WIDTH: Final[int] = 60
+PANEL_BORDER_COLOR: Final[str] = "cyan"
 
 INFO_COLOR: Final[str] = "cyan"
 SUCCESS_COLOR: Final[str] = "green"

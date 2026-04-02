@@ -20,6 +20,7 @@ from projectvscodetemplates.constants import (
     INFO_COLOR,
     SPINNER_STYLE,
     MIN_TERMINAL_WIDTH,
+    PANEL_BORDER_COLOR,
 )
 
 console = Console()
@@ -89,6 +90,25 @@ def print_section(title: str, width: int | None = None) -> None:
     )
     console.print("[bold cyan]" + "=" * width + "[/]")
     console.print()
+
+
+def print_menu_header(title: str, width: int | None = None) -> None:
+    """Print a consistent section header using Rich Panel.
+
+    Args:
+        title: The header title to display
+        width: Optional width (auto-calculated if not provided)
+    """
+    if width is None:
+        width = min(get_terminal_width(), 46)
+
+    panel = Panel(
+        f"[bold]{title}[/]",
+        border_style="cyan",
+        width=width,
+        padding=(0, 0),
+    )
+    console.print(f"\n{panel}\n")
 
 
 def clear_screen() -> None:
