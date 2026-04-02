@@ -7,18 +7,9 @@
 
 # PROJECT VSCODE TEMPLATES
 
-Ready-made VS Code setups for students, developers, creators, and remote teams.
+Tool that automatically sets up VS Code for you with the perfect extensions, settings, and shortcuts for your workflow. Instead of manually installing 20+ extensions and changing settings, just pick a preset and it all happens in seconds.
 
 ![SAMPLE](https://github.com/roshhellwett/projectvscodetemplates/blob/45a255158543af850adc24d55df143181502b7d4/Sample/sample.png)
-
-## What is this?
-
-**VSCode Templates** is a tool that automatically sets up VS Code for you with the perfect extensions, settings, and shortcuts for your workflow. Instead of manually installing 20+ extensions and changing settings, just pick a preset and it all happens in seconds!
-
-### Why use this?
-- **No more searching** for "best VS Code extensions for Python"
-- **One-click setup** - everything configured automatically
-- **15 ready-made presets** for different types of work
 
 ---
 
@@ -44,7 +35,7 @@ pip install projectvscodetemplates
 After installing, just type:
 
 ```bash
-projectvscodetemplates
+python -m projectvscodetemplates start
 ```
 
 That's it! The tool will ask you questions and set up VS Code for you.
@@ -63,7 +54,7 @@ projectvscodetemplates
 Or run with Python directly:
 
 ```bash
-python -m projectvscodetemplates
+python -m projectvscodetemplates start
 ```
 
 ### Option 2: Run from a local clone
@@ -96,88 +87,7 @@ projectvscodetemplates
 | Building mobile Flutter apps | `mobile-flutter` | Flutter and Dart support |
 | Building Go backend apps | `go-backend` | Go language support |
 
-**Don't know which one?** Just run the tool and answer the questions - it will recommend the best preset for you!
-
----
-
-## Step-by-Step Example: Installing a Python Preset
-
-Let's say you want to set up VS Code for Python:
-
-1. Open your terminal
-2. Type: `pip install projectvscodetemplates`
-3. Wait for it to install (shows "Successfully installed")
-4. Type: `projectvscodetemplates`
-5. The tool will show you a list of presets
-6. Type the number for `python-beginner` or `python-professional`
-7. Press Enter and let it install everything
-
-Done! Your VS Code is now ready for Python programming!
-
----
-
-## What Happens During Installation?
-
-When you install a preset, the tool:
-
-1. **Installs extensions** - VS Code extensions for your chosen workflow
-2. **Configures settings** - Editor settings, formatting, themes
-3. **Sets up keybindings** - Keyboard shortcuts for faster work
-4. **Creates snippets** - Ready-made code templates
-
-You can watch the installation progress in your terminal.
-
----
-
-## Troubleshooting
-
-### "pip is not recognized" error
-- Make sure Python is installed
-- Make sure Python is in your PATH (during installation, check "Add Python to PATH")
-
-### "command not found" error
-- Try restarting your terminal
-- On macOS/Linux, you may need to add `~/.local/bin` to your PATH
-
-### VS Code not opening
-- Make sure VS Code is installed: https://code.visualstudio.com/
-- Install it first, then run this tool again
-
----
-
-## For Developers
-
-### Project Layout
-
-```
-projectvscodetemplates/
-├── src/projectvscodetemplates/   # Main source code
-│   ├── presets/                  # Preset configurations
-│   ├── cli.py                    # Command-line interface
-│   └── ...
-├── windows/                      # Windows installer scripts
-├── linux/                        # Linux installer scripts
-└── tests/                        # Test files
-```
-
-### Running Tests
-
-```bash
-pytest
-```
-
-### Building for PyPI
-
-```bash
-python -m build
-```
-
----
-
-## Need Help?
-
-- **GitHub Issues**: https://github.com/zenithopensourceprojects/projectvscodetemplates/issues
-- **Documentation**: https://github.com/zenithopensourceprojects/projectvscodetemplates#readme
+Don't know which one?** Just run the tool and answer the questions - it will recommend the best preset for you!
 
 ---
 
