@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "projectvscodetemplates"
+version = "1.0.0"
+description = "Ready-made VS Code configurations for developers and students"
+readme = "readme.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Roshan Kr Singh", email = "roshankumar77630@gmail.com"}
+]
+keywords = ["vscode", "templates", "presets", "ide", "configuration", "productivity"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: IDEs",
+    "Topic :: Software Development :: Pre-processors",
+]
+dependencies = [
+    "typer[all]>=0.12.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+projectvscodetemplates = "projectvscodetemplates.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/zenithopensourceprojects/projectvscodetemplates"
+Repository = "https://github.com/zenithopensourceprojects/projectvscodetemplates"
+Documentation = "https://github.com/zenithopensourceprojects/projectvscodetemplates#readme"
+Issues = "https://github.com/zenithopensourceprojects/projectvscodetemplates/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["projectvscodetemplates*"]
+
+[tool.setuptools.package-data]
+projectvscodetemplates = ["presets/*.json", "presets/*/*.json"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "C4"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
