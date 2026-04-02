@@ -102,53 +102,31 @@ tailored for different development needs.
                 f"\n[dim]Currently installed:[/] [cyan]{installed.preset_name or installed.preset_id}[/]"
             )
 
-        console.print("\n[bold cyan]+======================================+[/]")
-        console.print(
-            "[bold cyan]|[/]         [bold]Main Menu Options[/]            [bold cyan]|[/]"
-        )
-        console.print("[bold cyan]+======================================+[/]")
-        console.print("[bold cyan]|[/]")
-        console.print(
-            "[bold cyan]|[/]   [yellow]1.[/]  [white]Browse & Preview Presets[/]      [bold cyan]|[/]"
-        )
-        console.print(
-            "[bold cyan]|[/]   [yellow]2.[/]  [white]Find Perfect Preset (Quiz)[/]       [bold cyan]|[/]"
-        )
-        console.print(
-            "[bold cyan]|[/]   [yellow]3.[/]  [white]Search Presets[/]                   [bold cyan]|[/]"
-        )
-        console.print(
-            "[bold cyan]|[/]   [yellow]4.[/]  [white]Install a Preset[/]                [bold cyan]|[/]"
-        )
-        console.print(
-            "[bold cyan]|[/]   [yellow]5.[/]  [white]View Installed Preset[/]            [bold cyan]|[/]"
-        )
-        console.print(
-            "[bold cyan]|[/]   [yellow]6.[/]  [white]Remove/Uninstall Preset[/]         [bold cyan]|[/]"
-        )
-        console.print(
-            "[bold cyan]|[/]   [yellow]7.[/]  [white]Backup & Restore[/]                [bold cyan]|[/]"
-        )
-        console.print(
-            "[bold cyan]|[/]   [yellow]8.[/]  [white]Install Extensions Only[/]         [bold cyan]|[/]"
-        )
-        console.print(
-            "[bold cyan]|[/]   [yellow]9.[/]  [white]Update projectvscodetemplates[/]   [bold cyan]|[/]"
-        )
-        console.print(
-            "[bold cyan]|[/]   [yellow]10.[/] [white]Help & Commands[/]                  [bold cyan]|[/]"
-        )
-        console.print(
-            "[bold cyan]|[/]   [yellow]11.[/] [white]About[/]                           [bold cyan]|[/]"
-        )
-        console.print("[bold cyan]|[/]")
-        console.print(
-            "[bold cyan]|[/]   [yellow]0.[/]  [red]Exit[/]                             [bold cyan]|[/]"
-        )
-        console.print("[bold cyan]|[/]")
-        console.print("[bold cyan]+======================================+[/]")
+        menu_items = [
+            ("1", "Browse & Preview Presets"),
+            ("2", "Find Perfect Preset (Quiz)"),
+            ("3", "Search Presets"),
+            ("4", "Install a Preset"),
+            ("5", "View Installed Preset"),
+            ("6", "Remove/Uninstall Preset"),
+            ("7", "Backup & Restore"),
+            ("8", "Install Extensions Only"),
+            ("9", "Update projectvscodetemplates"),
+            ("10", "Help & Commands"),
+            ("11", "About"),
+            ("0", "Exit"),
+        ]
 
-        console.print()
+        menu_text = "\n".join(f"[yellow]{num:>2}.[/]  {text}" for num, text in menu_items)
+
+        menu_panel = Panel(
+            menu_text,
+            title="[bold]Main Menu Options[/]",
+            border_style="cyan",
+            padding=(0, 2),
+        )
+        console.print(menu_panel)
+
         return safe_input("Enter your choice (0-11): ", allow_empty=False)
 
     def handle_browse_presets(self) -> None:
