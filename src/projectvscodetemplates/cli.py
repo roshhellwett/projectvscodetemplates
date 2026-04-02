@@ -35,6 +35,7 @@ from projectvscodetemplates.utils import (
     print_info,
     print_header,
     print_section,
+    print_menu_header,
     clear_screen,
     pause,
     safe_input,
@@ -132,11 +133,7 @@ tailored for different development needs.
     def handle_browse_presets(self) -> None:
         """Handle browse presets option."""
         clear_screen()
-        console.print("\n[bold cyan]+==============================================+[/]")
-        console.print(
-            "[bold cyan]|[/]         [bold]Browse & Preview Presets[/]           [bold cyan]|[/]"
-        )
-        console.print("[bold cyan]+==============================================+[/]\n")
+        print_menu_header("Browse & Preview Presets")
 
         categories = self.preset_manager.get_categories()
 
@@ -353,11 +350,7 @@ tailored for different development needs.
     def handle_install(self) -> None:
         """Handle preset installation."""
         clear_screen()
-        console.print("\n[bold cyan]+==============================================+[/]")
-        console.print(
-            "[bold cyan]|[/]              [bold]Install a Preset[/]                 [bold cyan]|[/]"
-        )
-        console.print("[bold cyan]+==============================================+[/]\n")
+        print_menu_header("Install a Preset")
 
         installed = self.installer.get_installed_preset()
         if installed:
@@ -397,11 +390,7 @@ tailored for different development needs.
         """Install a preset with user confirmation."""
         clear_screen()
 
-        console.print(f"\n[bold cyan]+==============================================+[/]")
-        console.print(
-            f"[bold cyan]|[/]         [bold]Ready to Install[/]                       [bold cyan]|[/]"
-        )
-        console.print(f"[bold cyan]+==============================================+[/]\n")
+        print_menu_header("Ready to Install")
 
         console.print(f"[bold cyan]Preset:[/] [white]{preset.name}[/]")
         console.print(f"[bold cyan]ID:[/] [cyan]{preset.id}[/]\n")
@@ -474,11 +463,7 @@ tailored for different development needs.
     def handle_view_installed(self) -> None:
         """Handle view installed preset."""
         clear_screen()
-        console.print("\n[bold cyan]+==============================================+[/]")
-        console.print(
-            "[bold cyan]|[/]         [bold]View Installed Preset[/]               [bold cyan]|[/]"
-        )
-        console.print("[bold cyan]+==============================================+[/]\n")
+        print_menu_header("View Installed Preset")
 
         installed = self.installer.get_installed_preset()
 
@@ -523,11 +508,7 @@ tailored for different development needs.
     def handle_uninstall(self) -> None:
         """Handle preset uninstallation."""
         clear_screen()
-        console.print("\n[bold cyan]+==============================================+[/]")
-        console.print(
-            "[bold cyan]|[/]          [bold]Remove/Uninstall Preset[/]            [bold cyan]|[/]"
-        )
-        console.print("[bold cyan]+==============================================+[/]\n")
+        print_menu_header("Remove/Uninstall Preset")
 
         installed = self.installer.get_installed_preset()
 
@@ -559,11 +540,7 @@ tailored for different development needs.
         """Handle backup and restore operations."""
         while True:
             clear_screen()
-            console.print("\n[bold cyan]+==============================================+[/]")
-            console.print(
-                "[bold cyan]|[/]            [bold]Backup & Restore[/]                    [bold cyan]|[/]"
-            )
-            console.print("[bold cyan]+==============================================+[/]\n")
+            print_menu_header("Backup & Restore")
 
             stats = self.backup_manager.get_backup_stats()
             console.print(f"[bold]Total Backups:[/] {stats['total_backups']}")
@@ -737,11 +714,7 @@ tailored for different development needs.
     def handle_install_extensions(self) -> None:
         """Handle installing extensions only."""
         clear_screen()
-        console.print("\n[bold cyan]+==============================================+[/]")
-        console.print(
-            "[bold cyan]|[/]         [bold]Install Extensions Only[/]            [bold cyan]|[/]"
-        )
-        console.print("[bold cyan]+==============================================+[/]\n")
+        print_menu_header("Install Extensions Only")
 
         if not check_vscode_installed():
             console.print(
@@ -772,11 +745,7 @@ tailored for different development needs.
         extensions = self.preset_manager.get_extensions(preset.id)
 
         clear_screen()
-        console.print(f"\n[bold cyan]+==============================================+[/]")
-        console.print(
-            f"[bold cyan]|[/]  [bold]Extensions for {preset.name}[/]                    [bold cyan]|[/]"
-        )
-        console.print(f"[bold cyan]+==============================================+[/]\n")
+        print_menu_header(f"Extensions for {preset.name}")
 
         if not extensions:
             console.print("[yellow]No extensions defined for this preset.[/]")
@@ -803,11 +772,7 @@ tailored for different development needs.
     def handle_update(self) -> None:
         """Handle package update."""
         clear_screen()
-        console.print("\n[bold cyan]+==============================================+[/]")
-        console.print(
-            "[bold cyan]|[/]       [bold]Update projectvscodetemplates[/]         [bold cyan]|[/]"
-        )
-        console.print("[bold cyan]+==============================================+[/]\n")
+        print_menu_header("Update projectvscodetemplates")
 
         console.print(f"[bold cyan]Current version:[/] [white]{__version__}[/]\n")
         console.print("[cyan]Checking for updates...[/]\n")
