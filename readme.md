@@ -9,7 +9,7 @@
 
 Tool that automatically sets up VS Code for you with the perfect extensions, settings, and shortcuts for your workflow. Instead of manually installing 20+ extensions and changing settings, just pick a preset and it all happens in seconds.
 
-![SAMPLE](https://github.com/roshhellwett/projectvscodetemplates/blob/45a255158543af850adc24d55df143181502b7d4/Sample/sample.png)
+![SAMPLE](https://github.com/roshhellwett/projectvscodetemplates/blob/1035720e76389346d74a973b60858aaec8b25e20/sample/sample.png)
 
 ---
 
