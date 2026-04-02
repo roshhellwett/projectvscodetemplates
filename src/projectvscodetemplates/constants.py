@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Final
 
 PACKAGE_NAME: Final[str] = "projectvscodetemplates"
-PACKAGE_VERSION: Final[str] = "1.1.1"
+PACKAGE_VERSION: Final[str] = "1.1.2"
 PACKAGE_AUTHOR: Final[str] = "Roshan Kr Singh"
 PACKAGE_EMAIL: Final[str] = "roshankumar77630@gmail.com"
 

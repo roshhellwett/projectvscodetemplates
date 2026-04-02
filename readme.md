@@ -66,25 +66,13 @@ Or run with Python directly:
 python -m projectvscodetemplates
 ```
 
-### Option 2: Windows PowerShell Installer
-
-If you prefer Windows-specific installation:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\windows\install.ps1 -Interactive
-```
-
-### Option 3: Linux/macOS Shell Script
+### Option 2: Run from a local clone
 
 ```bash
-chmod +x ./linux/quiz.sh
-./linux/quiz.sh
-```
-
-Or install a specific preset:
-
-```bash
-./linux/install.sh --preset python-beginner
+git clone https://github.com/zenithopensourceprojects/projectvscodetemplates.git
+cd projectvscodetemplates
+pip install -e .
+projectvscodetemplates
 ```
 
 ---

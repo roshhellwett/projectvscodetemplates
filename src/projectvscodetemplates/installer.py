@@ -18,6 +18,7 @@ __all__ = [
 
 from projectvscodetemplates.presets import PresetManager, get_preset_manager
 from projectvscodetemplates.constants import (
+    PACKAGE_VERSION,
     get_vscode_config_dir,
     get_vscode_snippets_dir,
 )
@@ -269,7 +270,7 @@ class VSCodeInstaller:
             "preset_id": preset_id,
             "preset_name": preset.name,
             "installed_at": datetime.now().isoformat(),
-            "version": "1.0.0",
+            "version": PACKAGE_VERSION,
             "files": result.files_copied,
         }
         self._save_installed_info(info)

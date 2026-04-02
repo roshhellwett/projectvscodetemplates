@@ -279,12 +279,12 @@ class PresetManager:
         return None
 
     def get_snippets(self, preset_id: str) -> dict[str, PresetFile]:
-        """Get code snippets for a preset."""
+        """Get VS Code snippet files for a preset."""
         preset_dir = self._get_presets_dir() / preset_id
         snippets: dict[str, PresetFile] = {}
 
         if preset_dir.exists():
-            for file_path in preset_dir.glob("*.snippets"):
+            for file_path in preset_dir.glob("*.code-snippets"):
                 try:
                     with open(file_path, "r", encoding="utf-8") as f:
                         content = json.load(f)

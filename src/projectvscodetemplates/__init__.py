@@ -2,7 +2,7 @@
 
 import logging
 
-__version__ = "1.1.1"
+__version__ = "1.1.2"
 __author__ = "Roshan Kr Singh"
 __email__ = "roshankumar77630@gmail.com"
 
@@ -33,6 +33,7 @@ logger.addHandler(logging.NullHandler())
 __all__ = [
     "__version__",
     "__author__",
+    "__email__",
     "PresetManager",
     "Preset",
     "VSCodeInstaller",
@@ -47,16 +48,4 @@ __all__ = [
     "InstallationError",
     "BackupError",
     "ExtensionError",
-]
-
-__all__ = [
-    "__version__",
-    "__author__",
-    "PresetManager",
-    "Preset",
-    "VSCodeInstaller",
-    "BackupManager",
-    "ExtensionManager",
-    "QuizEngine",
-    "QuickQuiz",
 ]

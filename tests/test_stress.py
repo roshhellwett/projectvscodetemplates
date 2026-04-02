@@ -611,13 +611,13 @@ def test_exception_preserves_cause():
 
 
 def test_version_exact_match():
-    """Test __version__ equals '1.1.1'."""
-    assert __version__ == "1.1.1"
+    """Test __version__ equals '1.1.2'."""
+    assert __version__ == "1.1.2"
 
 
 def test_version_constants_match():
     """Test constants VERSION matches __version__."""
-    assert constants.PACKAGE_VERSION == "1.1.1"
+    assert constants.PACKAGE_VERSION == "1.1.2"
 
 
 def test_version_drift_guard():
