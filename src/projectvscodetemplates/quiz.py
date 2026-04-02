@@ -16,7 +16,16 @@ from projectvscodetemplates.utils import (
     truncate_string,
     get_terminal_width,
 )
-from projectvscodetemplates.constants import DIFFICULTY_COLORS
+from projectvscodetemplates.constants import (
+    DIFFICULTY_COLORS,
+    QUIZ_SCORE_TAG_EXACT,
+    QUIZ_SCORE_TAG_PARTIAL,
+    QUIZ_SCORE_CATEGORY,
+    QUIZ_SCORE_DIFFICULTY,
+    QUIZ_SCORE_LANGUAGE,
+    QUIZ_SCORE_BASE,
+    QUIZ_MIN_CONFIDENCE,
+)
 
 console = Console()
 
@@ -356,7 +365,7 @@ class QuizEngine:
 
                 if tag_lower in preset_tag_set:
                     weight = self.tag_weights.get(tag, 1.0)
-                    score += 3.0 * weight
+                    score += QUIZ_SCORE_TAG_EXACT * weight
                     tag_matches[tag] = tag_matches.get(tag, 0) + 1
                     match_reasons.append(f"Matches tag: {tag}")
 
@@ -364,31 +373,32 @@ class QuizEngine:
                     if tag_lower in ptag or ptag in tag_lower:
                         if ptag != tag_lower:
                             weight = self.tag_weights.get(tag, 1.0)
-                            score += 1.0 * weight
+                            score += QUIZ_SCORE_TAG_PARTIAL * weight
                             tag_matches[tag] = tag_matches.get(tag, 0) + 1
 
             if preset.category == "student" and "student" in unique_tags:
-                score += 2.0
+                score += QUIZ_SCORE_CATEGORY
                 match_reasons.append("Student category match")
             if preset.category == "professional" and any(
                 t in unique_tags for t in ["professional", "career"]
             ):
-                score += 2.0
+                score += QUIZ_SCORE_CATEGORY
                 match_reasons.append("Professional category match")
 
             difficulty_tags = {"beginner", "intermediate", "advanced", "professional"}
             if preset.difficulty in unique_tags:
-                score += 2.0
+                score += QUIZ_SCORE_DIFFICULTY
                 match_reasons.append(f"Difficulty level: {preset.difficulty}")
 
             language_tags = {"python", "javascript", "java", "cpp", "c", "rust", "go", "typescript"}
             preset_lang_tags = preset_tag_set & language_tags
             matched_lang = unique_tags & preset_lang_tags
             if matched_lang:
-                score += 1.5
+                score += QUIZ_SCORE_LANGUAGE
                 match_reasons.append(f"Language match: {', '.join(list(matched_lang)[:2])}")
 
             if score > 0:
+                score += QUIZ_SCORE_BASE
                 max_possible_score = (
                     len(unique_tags) * 3.0 * max(self.tag_weights.values(), default=1.0)
                 )

@@ -154,3 +154,11 @@ SEARCH_SCORE_TAG: Final[int] = 5
 SEARCH_SCORE_DESCRIPTION: Final[int] = 3
 SEARCH_SCORE_TARGET_USER: Final[int] = 2
 SEARCH_FUZZY_THRESHOLD: Final[float] = 0.5
+
+QUIZ_SCORE_TAG_EXACT: Final[float] = 3.0
+QUIZ_SCORE_TAG_PARTIAL: Final[float] = 1.0
+QUIZ_SCORE_CATEGORY: Final[float] = 2.0
+QUIZ_SCORE_DIFFICULTY: Final[float] = 2.0
+QUIZ_SCORE_LANGUAGE: Final[float] = 1.5
+QUIZ_SCORE_BASE: Final[float] = 2.0
+QUIZ_MIN_CONFIDENCE: Final[float] = 0.3
