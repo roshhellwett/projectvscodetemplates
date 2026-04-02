@@ -1,5 +1,6 @@
 """Preset management for ProjectVSCodeTemplates."""
 
+import difflib
 import json
 import os
 from dataclasses import dataclass, field
@@ -10,6 +11,13 @@ from typing import Any
 from projectvscodetemplates.constants import (
     DIFFICULTY_COLORS,
     DIFFICULTY_LEVELS,
+    SEARCH_SCORE_EXACT_ID,
+    SEARCH_SCORE_ID_CONTAINS,
+    SEARCH_SCORE_NAME,
+    SEARCH_SCORE_TAG,
+    SEARCH_SCORE_DESCRIPTION,
+    SEARCH_SCORE_TARGET_USER,
+    SEARCH_FUZZY_THRESHOLD,
 )
 
 
@@ -308,38 +316,48 @@ class PresetManager:
         """
         Search presets by name, description, tags, or ID.
 
-        Uses weighted scoring:
+        Uses weighted scoring with fuzzy matching:
         - Exact ID match: 10 points
+        - ID contains: 2 points
         - Name contains: 8 points
         - Tag match: 5 points
         - Description contains: 3 points
         - Target user contains: 2 points
+        - Fuzzy match on name: score based on similarity
         """
         query_lower = query.lower().strip()
         if not query_lower:
             return self.presets
 
-        scored: list[tuple[Preset, int]] = []
+        scored: list[tuple[Preset, float]] = []
 
         for preset in self.presets:
-            score = 0
+            score = 0.0
+            preset_id_lower = preset.id.lower()
+            preset_name_lower = preset.name.lower()
+            preset_desc_lower = preset.description.lower()
+            preset_user_lower = preset.target_user.lower()
 
-            if query_lower == preset.id.lower():
-                score += 10
-            elif query_lower in preset.id.lower():
-                score += 2
+            if query_lower == preset_id_lower:
+                score += SEARCH_SCORE_EXACT_ID
+            elif query_lower in preset_id_lower:
+                score += SEARCH_SCORE_ID_CONTAINS
 
-            if query_lower in preset.name.lower():
-                score += 8
+            if query_lower in preset_name_lower:
+                score += SEARCH_SCORE_NAME
+            else:
+                fuzzy_score = difflib.SequenceMatcher(None, query_lower, preset_name_lower).ratio()
+                if fuzzy_score >= SEARCH_FUZZY_THRESHOLD:
+                    score += fuzzy_score * SEARCH_SCORE_NAME
 
             if any(query_lower in tag.lower() for tag in preset.tags):
-                score += 5
+                score += SEARCH_SCORE_TAG
 
-            if query_lower in preset.description.lower():
-                score += 3
+            if query_lower in preset_desc_lower:
+                score += SEARCH_SCORE_DESCRIPTION
 
-            if query_lower in preset.target_user.lower():
-                score += 2
+            if query_lower in preset_user_lower:
+                score += SEARCH_SCORE_TARGET_USER
 
             if score > 0:
                 scored.append((preset, score))

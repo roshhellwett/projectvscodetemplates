@@ -146,3 +146,11 @@ MENU_EXTENSIONS: Final[str] = "8"
 MENU_UPDATE: Final[str] = "9"
 MENU_HELP: Final[str] = "10"
 MENU_ABOUT: Final[str] = "11"
+
+SEARCH_SCORE_EXACT_ID: Final[int] = 10
+SEARCH_SCORE_ID_CONTAINS: Final[int] = 2
+SEARCH_SCORE_NAME: Final[int] = 8
+SEARCH_SCORE_TAG: Final[int] = 5
+SEARCH_SCORE_DESCRIPTION: Final[int] = 3
+SEARCH_SCORE_TARGET_USER: Final[int] = 2
+SEARCH_FUZZY_THRESHOLD: Final[float] = 0.5
